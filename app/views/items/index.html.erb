@@ -1,0 +1,36 @@
+
+<div class="row text-center"><h1>AVAILABLE ITEMS</h1></div>
+<br>
+
+<br>
+<div class = "row">
+    <div class = "col-xs-2 col-md-2 col-sm-2 text-center glyphicons glyphicons-imac"></div>
+	<div class = "col-xs-1 col-md-1 col-sm-1"></div>
+	<div class = "col-xs-2 col-md-2 col-sm-2">NAME</div>
+	<div class = "col-xs-2 col-md-2 col-sm-2">PRICE</div>
+	<div class = "col-xs-2 col-md-2 col-sm-2">COUNT</div>
+	<div class = "col-xs-1 col-md-1 col-sm-1"></div>
+	<div class = "col-xs-2 col-md-2 col-sm-2 text-center"></div>
+	
+</div>
+<br>
+
+<% @items.each do |item| %>
+<div class = "row">
+    <div class = "col-xs-2 col-md-2 col-sm-2 text-center"><%= link_to 'SHOW ITEM', item_path(item) %></div>
+	<div class = "col-xs-1 col-md-1 col-sm-1">|</div>
+	<div class = "col-xs-2 col-md-2 col-sm-2"><%= item.name %></div>
+	<div class = "col-xs-2 col-md-2 col-sm-2"><%= item.price %></div>
+	<div class = "col-xs-2 col-md-2 col-sm-2"><%= item.count %></div>
+	<div class = "col-xs-1 col-md-1 col-sm-1">|</div>
+	<div class = "col-xs-1 col-md-1 col-sm-1 text-center"><%= link_to 'EDIT ITEM', edit_item_path(item) %></div>
+	<div class = "col-xs-1 col-md-1 col-sm-1 text-center"><%= link_to 'DELETE ITEM', item_path(item), method: :delete, data: { confirm: 'Are you sure?' } %></div>
+	<hr>
+</div>
+
+<% end %>
+<br>
+<div class="row">
+	<div class = " text-center"><%= link_to 'ADD NEW ITEM', new_item_path%></div>
+	
+</div>

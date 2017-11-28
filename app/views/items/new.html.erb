@@ -1,0 +1,19 @@
+
+<%= form_for :item, url: items_path do |f| %>
+<div class ="row">
+	<div class= "row">
+		<div class ="col-sm-4 col-xs-4"><%= f.label :NAME %></div>
+		<div class ="col-sm-4 col-xs-4"><%= f.label :PRICE %></div>
+		<div class ="col-sm-4 col-xs-4"><%= f.label :COUNT %></div>
+	</div>
+	
+	<div class = "row">
+		<div class ="col-sm-4 col-xs-4"><%= f.text_field :name %></div>
+		<div class ="col-sm-4 col-xs-4"><%= f.text_field :price %></div>
+		<div class ="col-sm-4 col-xs-4"><%= f.text_field :count %></div>
+		
+	</div>
+	<br>
+	<div class = "row text-center"> <%= f.submit %></div>
+</div>
+<% end %>

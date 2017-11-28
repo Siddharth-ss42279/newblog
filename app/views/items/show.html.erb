@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @item.price %>
+</p>
+<p>
+  <strong>Count:</strong>
+  <%= @item.count %>
+</p>
+
+<p>
+	<%= link_to 'ALL ITEMS', items_path %>
+</p>
+<p><%= link_to 'EDIT ITEM', edit_item_path(@item)%></p>
